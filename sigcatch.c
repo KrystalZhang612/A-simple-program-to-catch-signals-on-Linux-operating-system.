@@ -1,7 +1,22 @@
 #include<stdio.h>
+
+//defines miscellaneous symbolic constants and types, and declares miscellaneous functions.
+//The contents of this header are shown below.
+
 #include<unistd.h>
+
+//here we use signal.h header defines a variable type sig_atomic_t
+//two function calls, and several macros to handle different signals
+//reported during a program's execution.
+
 #include<signal.h>
+
+//here we use time.h header defines four variable types
+//two macro and various functions for manipulating date and time
+
 #include<time.h>
+
+
 #include<string.h>
 
 
@@ -22,12 +37,14 @@ int main(){
     
     int input; 
     
-    
-    for(input =1;input <=9;input ++){    //loop until sent signal 9
+  //loop until sent signal 9 in our operating system 
+  
+    for(input =1;input <=9;input ++){   
+      
+      //prompt user for intented signals 
       
       printf("Process any signal: "); 
       
-    
       scanf("%d", &input);
       
       //signal 1 
@@ -65,7 +82,6 @@ int main(){
       }
 
       
-    
       //signal 3 
       
       else if (input == 3){
@@ -118,7 +134,6 @@ int main(){
         sleep(1);  // Delay for 1 second
       }
 
-      
       
       //signal 6
       
@@ -194,6 +209,3 @@ int main(){
     return 0;
   }
   
-
-  
-
